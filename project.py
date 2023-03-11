@@ -4,7 +4,7 @@ from datetime import datetime
 def transform(input_dt_str, out_time):
 
     input_dt_format = '%Y-%m-%d %H:%M:%S'
-    out_time.upper()
+
     try:
             
         # Create a datetime object from the input string
@@ -20,16 +20,11 @@ def transform(input_dt_str, out_time):
         elif out_time=='PST':    
             target_tz = pytz.timezone('US/Pacific')
         else:
-            print('Please enter a valid Timezone!!!')
-            return "invalid"
+            return False
 
         # Convert the datetime object to the target time zone
         target_dt = input_dt.astimezone(target_tz)
 
-        # Print the result in different formats
-        #print(target_dt.strftime('%Y-%m-%d %H:%M:%S %Z%z')) # YYYY-MM-DD HH:MM:SS Timezone+-offset
-        print(target_dt.strftime('%Y-%m-%d %H:%M:%S %Z')) # YYYY-MM-DD HH:MM:SS Timezone
-        print(target_dt.strftime('%m/%d/%Y %I:%M %p %Z')) # MM/DD/YYYY HH:MM AM/PM Timezone
         return target_dt.strftime('%m/%d/%Y %I:%M %p %Z')
     except Exception as e:
         return False
@@ -40,7 +35,13 @@ if __name__ == "__main__":
     print('NOTE: Input timezone is always CDT!!')
     input_dt_str = input('Enter datetime in following format (yyyy-mm-dd hh:mm:ss): ')
 
-    out_time = input('Enter an output US Timezone (EST/MST/PST):')
+    out_time = input('Enter an output US Timezone (EST/MST/PST):').upper()
 
 
-    transform(input_dt_str, out_time)
+    target_dt = transform(input_dt_str, out_time)
+    if target_dt:
+        # Print the result in different formats
+        #print(target_dt.strftime('%Y-%m-%d %H:%M:%S %Z%z')) # YYYY-MM-DD HH:MM:SS Timezone+-offset
+        print(target_dt) # YYYY-MM-DD HH:MM:SS Timezone
+    else:
+        print("Please enter a valid Timezone!!!")
