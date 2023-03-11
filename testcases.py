@@ -11,7 +11,7 @@ class TestDatetimeTransformation(unittest.TestCase):
     def test_invalid_timezone(self):
         input_dt_str = '2023-03-11 14:30:00'
         out_time = 'GST'
-        self.assertNotEqual(transform(input_dt_str, out_time), 'EST')
+        self.assertNotEqual(transform(input_dt_str, out_time), 'Invalid Timezone!!!')
     
     def test_invalid_hours_format(self):
         input_dt_str = '2023-03-11 26:30:00'
