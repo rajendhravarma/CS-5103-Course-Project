@@ -1,17 +1,17 @@
 # CS-5103-Course-Project
-Date Time Transformation: In this project we are writing a program to transform the given datetime string to different formats.
-Filenames:
-project.py: This file transforms the given timedate format to user mentioned/choice timedate format which can be EST, MST, PST.
-testcases.py: This file contains the test cases for the project.py file. 
+**Date Time Transformation:** In this project we are writing a program to transform the given datetime string to different formats.
+**Filenames:**
+**project.py:** This file transforms the given timedate format to user mentioned/choice timedate format which can be EST, MST, PST.
+**testcases.py:** This file contains the test cases for the project.py file. 
 
-Test cases are : 
+**Test cases are :** 
 1. valid o/p, 
 2. Invalid time zone, 
 3. Invalid hours format, 
 4. Invalid date format, 
 5. Invalid format all zeros.
 
-Steps:
+**Steps:**
 
 1) Running the program in VScode:
 Download the project.py and the testcases.py.
