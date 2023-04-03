@@ -25,7 +25,7 @@ def transform(input_dt_str, out_time):
         # Convert the datetime object to the target time zone
         target_dt = input_dt.astimezone(target_tz)
 
-        return target_dt.strftime('%m/%d/%Y %I:%M %p %Z')
+        return target_dt.strftime('%m/%d/%Y %A %I:%M %p %Z')
     except Exception as e:
         return False
 
