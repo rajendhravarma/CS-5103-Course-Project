@@ -22,6 +22,7 @@ Download the project.py and the testcases.py.
 Run the file project.py by giving the command python project.py. Once the program is ran, you will be asked to enter the input of the datetime string(Follow the format that was mentioned while giving the input). By default the input given by the user is taken as CST format. Then User will be asked to enter the expected Outtime format. Then based on the user choice of format, the O/P is generated in the desired format.
 
 As per the first requirement change, we are populating the day of the week along with the DateTimeTransformation.
+
 **Output format:** MM/DD/YYYY DayofWeek HH:MM:SS TimeZone
 
 ![image](https://user-images.githubusercontent.com/52074918/229395719-11188407-8c56-4122-a642-decf4741efad.png)
