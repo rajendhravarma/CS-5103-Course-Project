@@ -15,7 +15,7 @@ Running the program in VScode:
 Download the project.py and the testcases.py.
 Run the file project.py by giving the command python project.py. Once the program is ran, you will be asked to enter the input of the datetime string(Follow the format that was mentioned while giving the input). By default the input given by the user is taken as CST format. Then User will be asked to enter the expected Outtime format. Then based on the user choice of format, the O/P is generated in the desired format.
 
-![image](https://user-images.githubusercontent.com/52074918/224467659-9f64c19e-3b13-4d73-af4a-14efa079e657.png)
+![image](https://user-images.githubusercontent.com/52074918/229395719-11188407-8c56-4122-a642-decf4741efad.png)
 ![image](https://user-images.githubusercontent.com/52074918/224467644-c1585387-3a9b-435f-8961-9b3806370617.png)
 
 
