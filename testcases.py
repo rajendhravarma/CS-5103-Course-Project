@@ -6,7 +6,7 @@ class TestDatetimeTransformation(unittest.TestCase):
     def test_valid_output(self):
         input_dt_str = '2023-03-11 14:30:00'
         out_time = 'EST'
-        self.assertEqual(transform(input_dt_str, out_time), '03/11/2023 03:30 PM EST')
+        self.assertEqual(transform(input_dt_str, out_time), '03/11/2023 Saturday 03:30 PM EST')
     
     def test_invalid_timezone(self):
         input_dt_str = '2023-03-11 14:30:00'
