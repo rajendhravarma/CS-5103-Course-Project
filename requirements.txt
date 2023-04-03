@@ -1,6 +1,7 @@
 Requirement Specification:
 
-The transform function takes in two arguments: input_dt_str, input_dt_format, which are strings representing a datetime string and the target timezone, respectively.
-The function converts the datetime string from the original timezone to the target timezone.
-The function returns a string representing the converted datetime in the format of "YYYY-MM-DD HH:mm:ss".
-User can specify his choice of target timezone from the available timezones.
+1. The transform function takes in two arguments: input_dt_str, input_dt_format, which are strings representing a datetime string and the target timezone, respectively.
+2. The function converts the datetime string from the original timezone to the target timezone.
+3. The function returns a string representing the converted datetime in the format "YYYY-MM-DD DayofWeek HH:mm:ss TimeZone".
+4. User can specify his choice of target timezone from the available timezones.
+5. DayofWeek feature is added to the DateTimeTransformation. 
