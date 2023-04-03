@@ -29,7 +29,8 @@ As per the first requirement change, we are populating the day of the week along
 
 ![image](https://user-images.githubusercontent.com/52074918/229395808-6576b55e-1f91-4ac4-99ec-43784b9dc16f.png)
 
-2) Run the file testcases.py by giving the command python testcases.py. Once the program is ran, you will be displayed with the results of the test cases if they are passed or not. 
+2) Run the file testcases.py by giving the command python testcases.py. Once the program is ran, you will be displayed with the results of the test cases if they are passed or not.
+ 
 ![image](https://user-images.githubusercontent.com/52074918/229396090-2ce6035c-eedc-4058-b9ca-48c20e041b10.png)
 
 ![image](https://user-images.githubusercontent.com/52074918/229396197-014d5547-7a8b-498f-8f6b-ccfbc937afac.png)
