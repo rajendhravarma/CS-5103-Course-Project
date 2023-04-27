@@ -26,10 +26,14 @@ Run the file project.py by giving the command python project.py. Once the progra
 As per the first requirement change, we are populating the day of the week along with the DateTimeTransformation.
 
 **Output format:** MM/DD/YYYY DayofWeek HH:MM:SS TimeZone
+![image](https://user-images.githubusercontent.com/52074918/234763214-f2817aa0-2dfb-4734-8243-c3b535063119.png)
 
-
+![image](https://user-images.githubusercontent.com/52074918/234763308-ce54cf59-9a71-4424-8ea0-3f6e19c3997a.png)
 
 2) Run the file testcases.py by giving the command python testcases.py. Once the program is ran, you will be displayed with the results of the test cases if they are passed or not.
 
+![image](https://user-images.githubusercontent.com/52074918/234763411-e1c75cb9-2c94-4bba-982b-be34a3b7a9b0.png)
+
+![image](https://user-images.githubusercontent.com/52074918/234763462-8746c495-671b-448c-be03-d042e8674419.png)
 
 
