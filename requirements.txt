@@ -1,7 +1,15 @@
 Requirement Specification:
 
-1. The transform function takes in two arguments: input_dt_str, input_dt_format, which are strings representing a datetime string and the target timezone, respectively.
-2. The function converts the datetime string from the original timezone to the target timezone.
+1. The transform function takes in one arguments: input_dt_str which is a string representing a datetime string.
+2. The function converts the datetime string from the US/Central to Asia/Kolkata timezone.
 3. The function returns a string representing the converted datetime in the format "YYYY-MM-DD DayofWeek HH:mm:ss TimeZone".
-4. User can specify his choice of target timezone from the available timezones.
-5. DayofWeek feature is added to the DateTimeTransformation. 
+4. DayofWeek feature is added to the DateTimeTransformation. 
+5. Daylight saving feature is added to the DateTimeTransformation.
+6. During the datetime conversion from US/Central to Asia/Kolkata we do have some NonExistentTimeError that occurs due to Daylight saving.
+NonExistentTimeError:
+daylight start - march 12th 2:00am to 2:59am. (Program errors out due to time non existense. This is handled by test_invalid_time)
+daylight end - November 5th 1:00am to 1:59am. (Program errors out due to time non existense. This is handled by test_invalid_time)
+
+Daylight_details:
+Daylight_start: 2023/03/12
+Daylight_end: 2023/11/05

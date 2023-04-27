@@ -1,47 +1,39 @@
-import pytz
 from datetime import datetime
+import pytz
 
-def transform(input_dt_str, out_time):
-
-    input_dt_format = '%Y-%m-%d %H:%M:%S'
-
+# function to perfom the date-time transformation from one timezone to another timezone
+def transform(us_central):
     try:
-            
-        # Create a datetime object from the input string
-        input_dt = datetime.strptime(input_dt_str, input_dt_format)
+        # Create a datetime object from the user input
+        us_central_dt = datetime.strptime(us_central, '%Y-%m-%d %H:%M:%S')
 
-        # Define the time zone to convert to
-        if out_time=='MST':
-            target_tz = pytz.timezone('US/Mountain')
-        elif out_time=='EST':
-            target_tz = pytz.timezone('US/Eastern')
-        #elif out_time=='CDT':
-        #    target_tz = pytz.timezone('US/Central')
-        elif out_time=='PST':    
-            target_tz = pytz.timezone('US/Pacific')
-        else:
-            return False
+        # Get the timezone object for US/Central timezone
+        us_central_tz = pytz.timezone('US/Central')
 
-        # Convert the datetime object to the target time zone
-        target_dt = input_dt.astimezone(target_tz)
+        # Associate the datetime object with the timezone
+        us_central_dt = us_central_tz.localize(us_central_dt, is_dst=None)
 
-        return target_dt.strftime('%m/%d/%Y %A %I:%M %p %Z')
+        # Convert the datetime object to the Asia/Kolkata timezone
+        asia_kolkata_tz = pytz.timezone('Asia/Kolkata')
+        asia_kolkata_dt = us_central_dt.astimezone(asia_kolkata_tz)
+
+        return asia_kolkata_dt.strftime('%m/%d/%Y %A %I:%M %p %Z')    
+    
     except Exception as e:
         return False
 
-
 if __name__ == "__main__":
-    # Define the input datetime string and its format
-    print('NOTE: Input timezone is always CDT!!')
-    input_dt_str = input('Enter datetime in following format (yyyy-mm-dd hh:mm:ss): ')
+    
+    # Get the user input for the date-time in US/Central timezone
+    input_dt_str = input("Enter date-time in US/Central timezone (YYYY-MM-DD HH:MM:SS): ")
 
-    out_time = input('Enter an output US Timezone (EST/MST/PST):').upper()
+    # Calling the function to perform the date-time transformation from one timezone to another timezone
+    target_dt = transform(input_dt_str)
 
-
-    target_dt = transform(input_dt_str, out_time)
     if target_dt:
         # Print the result in different formats
         #print(target_dt.strftime('%Y-%m-%d %H:%M:%S %Z%z')) # YYYY-MM-DD HH:MM:SS Timezone+-offset
-        print(target_dt) # YYYY-MM-DD HH:MM:SS Timezone
+        print("The date-time in Asia/Kolkata timezone is:", target_dt)
+        
     else:
-        print("Please enter a valid Timezone!!!")
+        print("Please enter a valid DateTime!!!")
