@@ -1,0 +1,11 @@
+Function Transform:
+The function Transform has been changed in the new code. The old code had a function Transform that accepted two arguments (i.e., input_dt_str, out_time), whereas the new code has a function Transform that accepts only one argument (i.e., us_central).
+
+Input Validation:
+The new code has added input validation to ensure that the user enters a valid date-time in the specified format (i.e., YYYY-MM-DD HH:MM:SS).
+
+Timezone Handling:
+The old code had a hardcoded list of target time zones (i.e., MST, EST, PST), whereas the new code has specified the target timezone (i.e., Asia/Kolkata) directly in the code. Additionally, the new code is using the pytz library to handle time zones, whereas the old code did not use any libraries.
+
+Output Format:
+The old code returned the date-time in a specific format (i.e., '%m/%d/%Y %A %I:%M %p %Z'), whereas the new code is printing the date-time in a more user-friendly format by specifying the timezone directly in the output statement.
